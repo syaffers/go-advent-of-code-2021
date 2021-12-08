@@ -15,6 +15,7 @@ run:
 	./2021/day-05/main < ./2021/day-05/input
 	./2021/day-06/main < ./2021/day-06/input
 	./2021/day-07/main < ./2021/day-07/input
+	./2021/day-08/main < ./2021/day-08/input
 
 test:
 	./2021/day-01/main < ./2021/day-01/test
@@ -24,6 +25,10 @@ test:
 	./2021/day-05/main < ./2021/day-05/test
 	./2021/day-06/main < ./2021/day-06/test
 	./2021/day-07/main < ./2021/day-07/test
+	./2021/day-08/main < ./2021/day-08/test
+
+aux:
+	./2021/day-08/main < ./2021/day-08/aux
 
 clean:
 	rm */*/main
