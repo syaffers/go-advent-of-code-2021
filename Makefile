@@ -1,22 +1,11 @@
-all: day-01 day-02 day-03 day-04 day-05 day-06
+GO = go build
+SRCS := $(wildcard 2021/*/main.go)
+BINS := $(SRCS:%.go=%)
 
-day-01: 2021/day-01/main.go
-	go build -o 2021/day-01/main 2021/day-01/main.go
+all: ${BINS}
 
-day-02: 2021/day-02/main.go
-	go build -o 2021/day-02/main 2021/day-02/main.go
-
-day-03: 2021/day-03/main.go
-	go build -o 2021/day-03/main 2021/day-03/main.go
-
-day-04: 2021/day-04/main.go
-	go build -o 2021/day-04/main 2021/day-04/main.go
-
-day-05: 2021/day-05/main.go
-	go build -o 2021/day-05/main 2021/day-05/main.go
-
-day-06: 2021/day-06/main.go
-	go build -o 2021/day-06/main 2021/day-06/main.go
+%: %.go
+	${GO} -o $@ $<
 
 run:
 	./2021/day-01/main < ./2021/day-01/input
@@ -25,6 +14,7 @@ run:
 	./2021/day-04/main < ./2021/day-04/input
 	./2021/day-05/main < ./2021/day-05/input
 	./2021/day-06/main < ./2021/day-06/input
+	./2021/day-07/main < ./2021/day-07/input
 
 test:
 	./2021/day-01/main < ./2021/day-01/test
@@ -33,6 +23,7 @@ test:
 	./2021/day-04/main < ./2021/day-04/test
 	./2021/day-05/main < ./2021/day-05/test
 	./2021/day-06/main < ./2021/day-06/test
+	./2021/day-07/main < ./2021/day-07/test
 
 clean:
 	rm */*/main
