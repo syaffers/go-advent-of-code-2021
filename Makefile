@@ -21,6 +21,7 @@ run:
 	./2021/day-11/main < ./2021/day-11/input
 	./2021/day-12/main < ./2021/day-12/input
 	./2021/day-13/main < ./2021/day-13/input
+	./2021/day-14/main < ./2021/day-14/input
 
 test:
 	./2021/day-01/main < ./2021/day-01/test
@@ -36,6 +37,7 @@ test:
 	./2021/day-11/main < ./2021/day-11/test
 	./2021/day-12/main < ./2021/day-12/test
 	./2021/day-13/main < ./2021/day-13/test
+	./2021/day-14/main < ./2021/day-14/test
 
 aux:
 	./2021/day-08/main < ./2021/day-08/aux
