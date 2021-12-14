@@ -126,7 +126,7 @@ func part1(caveMap map[string][]string) int {
 	frontier = make([]string, 0)
 	frontier = append(frontier, "start")
 	visited := make(map[string]bool)
-	visited["start"] = true
+
 	return dfs(caveMap, visited)
 }
 
